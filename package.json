@@ -2,7 +2,7 @@
     "name": "@midopa-dept/mcp-greeting-server",
     "version": "1.0.0",
     "main": "build/index.js",
-    "module": "./src/index.ts",
+    "module": "src/index.ts",
     "type": "module",
     "bin": {
         "mcp-greeting-server": "./build/index.js"

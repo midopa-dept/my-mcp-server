@@ -4,16 +4,6 @@ description: MCP Server with greeting, calculator, time, and AI image generation
 author: Junha Kang
 homepage: https://github.com/midopa-dept/my-mcp-server
 license: MIT
-runtime: typescript
-
-buildCommand:
-  - pnpm install
-  - pnpm run build
-
-startCommand:
-  command: node
-  args:
-    - build/index.js
 
 configSchema:
   type: object

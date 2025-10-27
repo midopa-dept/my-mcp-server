@@ -6,6 +6,10 @@ homepage: https://github.com/midopa-dept/my-mcp-server
 license: MIT
 runtime: typescript
 
+buildCommand:
+  - pnpm install
+  - pnpm run build
+
 startCommand:
   command: node
   args:

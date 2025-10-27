@@ -1,0 +1,77 @@
+name: mcp-greeting-server
+version: 1.0.0
+description: MCP Server with greeting, calculator, time, and AI image generation tools
+author: Junha Kang
+homepage: https://github.com/midopa-dept/my-mcp-server
+license: MIT
+
+# MCP 서버 설정
+mcp:
+  # 서버 진입점 (빌드된 JS 파일)
+  entrypoint: build/index.js
+  
+  # 서버 실행 명령어
+  command: node
+  
+  # 런타임 설정
+  runtime: node
+  
+  # 필요한 Node.js 버전
+  node_version: ">=18.0.0"
+  
+  # 환경 변수 (사용자가 설정해야 함)
+  env:
+    - name: HF_TOKEN
+      description: "Hugging Face API Token for image generation"
+      required: false  # generateImage 도구를 사용하지 않으면 필수 아님
+
+# 제공하는 기능들
+capabilities:
+  tools:
+    - name: greeting
+      description: "Multi-language greeting tool supporting 6 languages"
+      
+    - name: calculator
+      description: "Basic arithmetic calculator with four operations"
+      
+    - name: getCurrentTime
+      description: "Get current time in any timezone"
+      
+    - name: generateImage
+      description: "Generate AI images from text prompts using Hugging Face"
+      
+  resources:
+    - name: server-info
+      description: "Server information and capabilities"
+      
+  prompts:
+    - name: code_review
+      description: "Professional code review prompt generator"
+
+# 설치 및 빌드 설정
+installation:
+  # 패키지 매니저
+  package_manager: pnpm
+  
+  # 설치 스크립트
+  install_command: pnpm install
+  
+  # 빌드 스크립트
+  build_command: pnpm run build
+
+# 태그 및 카테고리
+tags:
+  - greeting
+  - calculator
+  - timezone
+  - image-generation
+  - ai
+  - productivity
+  - utility
+
+# Smithery 카테고리
+categories:
+  - Development Tools
+  - AI & Machine Learning
+  - Productivity
+
